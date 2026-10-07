@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+/* Палітра: пасовищно-зелений, вушна бірка, світлий «польовий» фон */
+@theme {
+  --font-display: 'Unbounded', 'Golos Text', system-ui, sans-serif;
+  --font-sans: 'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-paper: #f6f7f2;
+  --color-ink: #16211a;
+  --color-slate: #56635a;
+  --color-line: #d9e0d6;
+  --color-tint: #eaf0e5;
+  --color-field: #1e4d33;
+  --color-field-2: #2e6b47;
+  --color-meadow: #7fa86b;
+  --color-tag: #f3c318;
+  --color-tag-dark: #c99c00;
+
+  --color-vac: #3b82f6;
+  --color-dew: #22a356;
+  --color-insp: #d4a20a;
+  --color-quar: #e5484d;
+  --color-treat: #8b5cf6;
+
+  --shadow-card: 0 1px 0 rgba(22, 33, 26, 0.04), 0 18px 40px -28px rgba(22, 33, 26, 0.35);
+  --shadow-lift: 0 1px 0 rgba(22, 33, 26, 0.04), 0 28px 56px -30px rgba(22, 33, 26, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+  font-size: 17px;
+  line-height: 1.6;
+}
+h1, h2, h3 { text-wrap: balance; }
+p, li, dd { text-wrap: pretty; }
+::selection { background: color-mix(in srgb, var(--color-tag) 55%, transparent); }
+:focus-visible { outline: 3px solid var(--color-tag-dark); outline-offset: 3px; border-radius: 4px; }
+
+/* Ледь помітна сітка крапок для першого екрана */
+@utility bg-dots {
+  background-image: radial-gradient(color-mix(in srgb, var(--color-field) 16%, transparent) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
