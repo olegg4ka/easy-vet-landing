@@ -123,7 +123,7 @@ export function Hero() {
             історією і планом щеплень
           </motion.h1>
           <motion.p variants={intro} initial="hidden" animate="show" custom={1.5} className="mt-6 max-w-[52ch] text-[19px] text-slate">
-            EasyVet замінює паперові журнали ферми. Тварини, бірки, огляди, лікування і каренція зберігаються в картці
+            EasyVet замінює паперові журнали ферми. Тварини, бірка, огляди, лікування і каренція зберігаються в картці
             тварини, а заплановані ветеринарні заходи — у календарі з нагадуваннями.
           </motion.p>
           <motion.div variants={intro} initial="hidden" animate="show" custom={2.5} className="mt-8 flex flex-wrap gap-3">
